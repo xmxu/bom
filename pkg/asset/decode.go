@@ -2,6 +2,7 @@ package asset
 
 import (
 	"encoding/binary"
+	"errors"
 	"fmt"
 	"image"
 	"io"
@@ -299,7 +300,7 @@ func (a *asset) ImageWalker(loop func(name string, img image.Image) (end bool)) 
 	}
 	return a.Renditions(func(cb *RenditionCallback) (stop bool) {
 		if cb.Err != nil {
-			return false
+			return errors.Is(cb.Err, io.EOF)
 		}
 		if cb.Type != RenditionTypeImage {
 			return false
