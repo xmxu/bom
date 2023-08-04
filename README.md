@@ -1,6 +1,7 @@
 # bom
 
 Apple iOS / macOS Assets.car decoder, write in golang.
+Fork [bom](https://github.com/iineva/bom) support rle compression.
 
 [ipa-server](https://github.com/iineva/ipa-server) use this to decode app icons in `Assets.cart`
 
@@ -10,7 +11,7 @@ Apple iOS / macOS Assets.car decoder, write in golang.
 ### Decode bom file
 
 ```golang
-import "github.com/iineva/bom/pkg/bom"
+import "github.com/xmxu/bom/pkg/bom"
 
 fileName := "Assets.car"
 f, _ := os.Open(fileName)
@@ -31,7 +32,7 @@ err := b.ReadTree("FACETKEYS", func(k io.Reader, d io.Reader) error {
 ### Decode Asset Catalog
 
 ```golang
-import "github.com/iineva/bom/pkg/asset"
+import "github.com/xmxu/bom/pkg/asset"
 
 fileName := "Assets.car"
 f, _ := os.Open(fileName)

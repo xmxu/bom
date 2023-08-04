@@ -3,7 +3,7 @@ package asset
 import (
 	"fmt"
 
-	"github.com/iineva/bom/pkg/helper"
+	"github.com/xmxu/bom/pkg/helper"
 )
 
 type csiheader struct {
@@ -34,10 +34,10 @@ type csiheader struct {
 
 type colorSpace uint32
 
-// struct {
-// 	ColorSpaceID uint32
-// 	Reserved     uint32
-// }
+//	struct {
+//		ColorSpaceID uint32
+//		Reserved     uint32
+//	}
 func (c colorSpace) ColorSpaceID() uint32 {
 	return uint32(c) & (0b1111 << 0)
 }

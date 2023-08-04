@@ -1,4 +1,4 @@
-module github.com/iineva/bom
+module github.com/xmxu/bom
 
 go 1.16
 

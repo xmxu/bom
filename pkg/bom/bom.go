@@ -5,7 +5,7 @@
 package bom
 
 import (
-	"github.com/iineva/bom/pkg/helper"
+	"github.com/xmxu/bom/pkg/helper"
 )
 
 const HeaderMagic = "BOMStore"

@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/iineva/bom/pkg/helper"
+	"github.com/xmxu/bom/pkg/helper"
 )
 
 func TestAsset(t *testing.T) {

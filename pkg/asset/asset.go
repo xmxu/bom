@@ -3,7 +3,7 @@ package asset
 import (
 	"fmt"
 
-	"github.com/iineva/bom/pkg/helper"
+	"github.com/xmxu/bom/pkg/helper"
 )
 
 // tag: 'CTAR'

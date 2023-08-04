@@ -11,8 +11,9 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/iineva/bom/pkg/mreader"
 	lzfse "github.com/iineva/go-lzfse"
+	"github.com/xmxu/bom/pkg/mreader"
+	"github.com/xmxu/bom/pkg/rle"
 )
 
 // BGRA to RGBA
@@ -133,6 +134,12 @@ func umCompression(t RenditionCompressionType, r io.Reader) (decoded io.ReadClos
 	// NOTE: do nothing
 	// TODO
 	// case kRenditionCompressionType_deepmap_2:
+	case kRenditionCompressionType_rle:
+		d, err := rle.Decode(r)
+		if err != nil {
+			return nil, err
+		}
+		decoded = io.NopCloser(bytes.NewBuffer(d))
 	default:
 		return nil, fmt.Errorf("unsupport compression type: %v", t)
 	}

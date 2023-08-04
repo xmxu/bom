@@ -9,8 +9,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/iineva/bom/pkg/bom"
-	"github.com/iineva/bom/pkg/helper"
+	"github.com/xmxu/bom/pkg/bom"
+	"github.com/xmxu/bom/pkg/helper"
 )
 
 // const typeMap = map[string]interface{}{

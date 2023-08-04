@@ -8,8 +8,8 @@ import (
 	"io"
 	"log"
 
-	"github.com/iineva/bom/pkg/helper"
-	"github.com/iineva/bom/pkg/reader"
+	"github.com/xmxu/bom/pkg/helper"
+	"github.com/xmxu/bom/pkg/reader"
 )
 
 type BomParser interface {
